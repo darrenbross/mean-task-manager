@@ -13,4 +13,11 @@ export class TaskService {
     return this.webReqService.post('lists', { title });
   }
 
+  getLists() {
+    return this.webReqService.get('lists');
+  }
+
+  getTasks(listId: string) {
+    return this.webReqService.get(`lists/${listId}/tasks`);
+  }
 }
