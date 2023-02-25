@@ -10,9 +10,9 @@ import { Task } from '../../models/task.model';
 })
 export class NewTaskComponent implements OnInit {
 
-  constructor(private taskService: TaskService, private route: ActivatedRoute, private router: Router) {  }
+  listId!: string;
 
-  listId: string;
+  constructor(private taskService: TaskService, private route: ActivatedRoute, private router: Router) {  }
   
   ngOnInit() {
     this.route.params.subscribe(
